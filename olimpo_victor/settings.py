@@ -123,3 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#Auth
+#Configuração do modelo de auticação e usuário
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'forum:feed'
+LOGOUT_URL = ' accounts:logout'
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django.backends.ModelBackend'
+)
